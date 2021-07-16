@@ -8,6 +8,12 @@ class Product(models.Model):
     price = models.IntegerField()
     stock = models.BooleanField(default=True)
     image = models.ImageField(upload_to='images')
+    
+    
+    def __str__(self):
+        return self.name
+    def __int__(self):
+        return self.price
 
     @property
     def imageURL(self):
